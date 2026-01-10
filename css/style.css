@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url("../assets/images/login.jpg") no-repeat center/cover;
+    background-size: contain;   /* 🔑 key change */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 360px;
+    padding: 30px;
+    background: rgba(60,60,60,0.7);
+    border-radius: 20px;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid white;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 14px;
+}
+
+.input-box i {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 10px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.error {
+    background: red;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+@media(max-width:480px) {
+    .login-box {
+        width: 90%;
+    }
+}
+/* =====================================
+   FLOATING LABEL INPUT (FINAL FIX)
+===================================== */
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 14px 40px 14px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+
+    background: #fff;
+    color: #000;        /* typed text visible */
+    font-size: 15px;
+}
+
+/* ICON */
+.input-box i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+/* LABEL (acts like placeholder) */
+.input-box label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s ease;
+    background: #fff;
+    padding: 0 5px;
+}
+
+/* WHEN INPUT IS FOCUSED OR HAS TEXT */
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -6px;
+    font-size: 12px;
+    color: #e63946;
+}
+
+/* BORDER ON FOCUS */
+.input-box input:focus {
+    border-color: #e63946;
+}
