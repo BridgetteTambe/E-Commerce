@@ -1,5 +1,4 @@
 1. Start session
-
 php
 <?php
 session_start();
@@ -7,10 +6,6 @@ session_start();
 if (!isset(_SESSION['cart']))_SESSION['cart'] = [];
 }
 ?>
-
-
----
-
 2. Add to Cart (add_to_cart.php)
 
 php
@@ -28,8 +23,7 @@ if (isset(_POST['product_id']))product_id = _POST['product_id'];
     echo "No product selected.";
 
 ?>
-3. Remove from Cart (remove_from_cart.php)*
-
+3. Remove from Cart (remove_from_cart.php)
 “`php
 <?php
 require 'session.php';
@@ -48,10 +42,7 @@ if (isset(_POST['product_id'])) {
 
 ?>
 “`
-
-—
-
-*4. View Cart (view_cart.php)*
+4. View Cart (view_cart.php)*
 
 “`php
 <?php
@@ -60,4 +51,5 @@ require 'session.php';
 echo "Cart Items: ";
 print_r(_SESSION['cart']);
 ?>
+
 
